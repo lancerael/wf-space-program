@@ -1,10 +1,10 @@
 export const STATUS_MAP = {
-  200: 'default',
-  500: 'error'
+	200: 'default',
+	500: 'error'
 }
 
 export const STATUS_COLOURS = {
-  default: 'black',
-  pending: '#FF6600',
-  error: 'red',
+	default: 'black',
+	pending: '#FF6600',
+	error: 'red',
 }
