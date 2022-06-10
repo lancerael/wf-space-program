@@ -1,9 +1,9 @@
-const controllers: { [key: string]: AbortController } = {}
+export const controllers: { [key: string]: AbortController } = {}
 
 export const apiRequestStatus = async (endpoint: string, controllerKey?: string, timeout?: number): Promise<200 | 500> => {
 	if (controllerKey) controllers[controllerKey] = new AbortController()
 	return new Promise(resolve => {
-		if (timeout) setTimeout(() => {
+		if (timeout !== undefined) setTimeout(() => {
 			if (controllerKey) abortRequestStatus(controllerKey)
 			resolve(500)
 		}, timeout)
