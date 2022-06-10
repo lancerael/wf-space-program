@@ -1,7 +1,7 @@
 # wf-space-program
 
-[![Tests](https://github.com/lancerael/wf-space-program/workflows/Tests/badge.svg?branch=master)](https://github.com/lancerael/wf-space-program/actions?query=workflow%3A%22Tests%22)
-[![Coverage Status](https://coveralls.io/repos/github/lancerael/wf-space-program/badge.svg?branch=master)](https://coveralls.io/github/lancerael/wf-space-program?branch=master)
+[![Tests](https://github.com/lancerael/wf-space-program/workflows/Tests/badge.svg?branch=main)](https://github.com/lancerael/wf-space-program/actions?query=workflow%3A%22Tests%22)
+[![Coverage Status](https://coveralls.io/repos/github/lancerael/wf-space-program/badge.svg?branch=main)](https://coveralls.io/github/lancerael/wf-space-program?branch=main)
 [![License](https://badgen.net/github/license/lancerael/wf-space-program)](https://github.com/lancerael/wf-space-program/blob/master/LICENSE)
 
 Component library for WF space program
