@@ -11,7 +11,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    process.env.NODE_ENV==='development' && mix({
+    process.env.NODE_ENV!=='production' && mix({
       handler: './fake-api'
     })
   ],
