@@ -17,23 +17,23 @@ Check out the repo and run the following commands:
 * `yarn install` - install the project and dependencies
 * `yarn dev` - launch the server and fake API so you can access the demo in the browser
 * `yarn lint` - to verify the style of the code
-* `yarn tdd` - to run the unit tests
+* `yarn tdd` (or `yarn test`)- to run the unit tests
 * `yarn bdd` - to run the integration tests
 
 There are also build and preview tasks, though they would be deprecated as the conversion to a monorepo is completed.  
 
 ## Atomic Structure
 
-Code is split heirarchically into atoms and molecules, meaning the smaller pieces of the AdvancedButton (button, loader and tooltip) can be reused inside other more advanced components.  There is also a seperate folder for helper functions and constants.
+Code is split heirarchically into atoms and molecules, meaning the smaller pieces of the AdvancedButton (button, loader and tooltip) can be reused inside other more advanced components.  There are also seperate folders for helper functions and constants.
 
 The typical structure of a component is:
 
-- `index.ts` - export so you can see named files without lengthening the import
+- `index.ts` - to see named files in the ide without lengthening the import
 - `Component.tsx` - the component code
 - `Component.types.ts` - the typescript types and interfaces for the component
 - `Component.test.ts` - the unit tests for the component
-- `styles/Component.style.tsx` - styled component code, in a folder so it can have its own types
-- `styles/Component.styles.types.ts` - typescript types and interfaces for the style
+- `Component.style.tsx` - styled component code
+- `Component.styles.types.ts` - typescript types and interfaces for the style
 
 ## Features
 
