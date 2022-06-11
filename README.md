@@ -42,7 +42,7 @@ The typical structure of a component is:
 - Uses Vite over Webpack for speed and simplicity
 - Uses eslint for code quality
 - Uses Jest and RTL for unit testing
-- Uses Cypress for behaviour driven tests
+- Uses Cypress for behaviour driven tests (may not be needed in monorepo, but I wanted to show how it works)
 - Code coverage reporting with coveralls
 - Uses Github Actions for CI/CD (example - pre-merge only)
 
