@@ -8,31 +8,45 @@ Component library for WF space program
 
 ## Overview
 
-To achieve the goal of presenting a reusable AdvancedButton component, I have shown the early stages of how I might set up a component library.
+In building an AdvancedButton component, I have shown the early stages of how I might set up a component library.  The project is currently set up as a single application, but I have taken some steps to show how it would be converted to a monorepo, with each component able to be published to npm and imported in isolation.
+
+## Getting started
+
+Check out the repo and run the following commands:
+
+* `yarn install` - install the project and dependencies
+* `yarn dev` - launch the server and fake API so you can access the demo in the browser
+* `yarn lint` - to verify the style of the code
+* `yarn tdd` - to run the unit tests
+* `yarn bdd` - to run the integration tests
+
+There are also build and preview tasks, though they would be deprecated as the conversion to a monorepo is completed.  
 
 ## Atomic Structure
 
-  -src
-    -components
-      -atoms
-      -molecules
-    -constants
-    -helpers
+Code is split heirarchically into atoms and molecules, meaning the smaller pieces of the AdvancedButton (button, loader and tooltip) can be reused inside other more advanced components.  There is also a seperate folder for helper functions and constants.
 
-## Components
+The typical structure of a component is:
 
-# Atoms
+- `index.ts` - export so you can see named files without lengthening the import
+- `Component.tsx` - the component code
+- `Component.types.ts` - the typescript types and interfaces for the component
+- `Component.test.ts` - the unit tests for the component
+- `styles/Component.style.tsx` - styled component code, in a folder so it can have its own types
+- `styles/Component.styles.types.ts` - typescript types and interfaces for the style
 
-*Button*
-*Loader*
-*Tooltip*
+## Features
 
-## Tech
+- Fully written in TypeScript
+- Yarn workspaces for monorepo (example - Button)
+- Uses Vite over Webpack for speed and simplicity
+- Uses eslint for code quality
+- Uses Jest and RTL for unit testing
+- Uses Cypress for behaviour driven tests (may not be needed in monorepo, but I wanted to show how it works)
+- Code coverage reporting with coveralls
+- Uses Github Actions for CI/CD (example - pre-merge only)
 
-* Vite
-* Typescript
-* React
-* eslint
-* Jest
-* React Test Library
-* Github Actions
+## Future Work
+
+- Complete conversion to monorepo and publish individual components on npm
+- Complete unit test coverage to 100%

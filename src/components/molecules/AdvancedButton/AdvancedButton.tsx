@@ -6,7 +6,7 @@ import { STATUS_MAP } from '@/constants'
 import Loader from '@/components/atoms/Loader'
 import { Status } from '@/components/atoms/Tooltip/Tooltip.types'
 import Tooltip from '@/components/atoms/Tooltip'
-import Button from '@/components/atoms/Button'
+import Button from '@/components/atoms/Button/src'
 
 const AdvancedButton = ({
 	defaultStatus = 'default',
