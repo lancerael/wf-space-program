@@ -1,5 +1,5 @@
 import { MouseEventHandler } from 'react'
-import { Status } from '../Tooltip/Tooltip.types'
+import { Status } from '../../Tooltip/Tooltip.types'
 
 type ValidChild = JSX.Element | string | false
 

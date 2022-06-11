@@ -1,6 +1,7 @@
 {
   "name": "wf-space-program",
   "private": true,
+  "license": "MIT",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
@@ -9,6 +10,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "workspaces": ["src/components/atoms/Button"],
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

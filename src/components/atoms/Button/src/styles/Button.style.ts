@@ -1,4 +1,4 @@
-import { STATUS_COLOURS } from '@/constants'
+import { STATUS_COLOURS } from '../../../../../constants'
 import styled, { css } from 'styled-components'
 
 import { StyledButtonProps } from './Button.style.types'

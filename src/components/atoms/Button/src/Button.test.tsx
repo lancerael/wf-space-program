@@ -3,7 +3,7 @@ import React from 'react'
 import Button from './Button'
 import { render, screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
-import { Status } from '../Tooltip/Tooltip.types'
+import { Status } from '../../Tooltip/Tooltip.types'
 
 expect.extend(toHaveNoViolations)
 
