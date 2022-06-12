@@ -8,7 +8,7 @@ Component library for WF space program
 
 ## Overview
 
-In building an AdvancedButton component, I have shown the early stages of how I might set up a component library.  The project is currently set up as a single application, but I have taken some steps to show how it would be converted to a monorepo, with each component able to be published to npm and imported in isolation.
+I have shown the early stages of how I might set up a component library.  The project is currently set up as a single application, but I have taken some steps to show how it would be converted to a monorepo, with each component published to npm to be imported in isolation.
 
 ## Getting started
 
@@ -17,7 +17,7 @@ Check out the repo and run the following commands:
 * `yarn install` - install the project and dependencies
 * `yarn dev` - launch the server and fake API so you can access the demo in the browser
 * `yarn lint` - to verify the style of the code
-* `yarn tdd` (or `yarn test`)- to run the unit tests
+* `yarn tdd` - (or `yarn test`) to run the unit tests
 * `yarn bdd` - to run the integration tests
 * `yarn storybook` - to launch storybook
 
@@ -35,8 +35,7 @@ The typical structure of a component is:
 - `Component.styles.types.ts` - typescript types and interfaces for the style
 - `Component.stories.ts` - storybook doc examples
 
-NOTE #1: I have set up the `Button` component as a standalone package, to show how the monorepo might look. On a successful PR, we could use the CI/CD pipleines to build and publish a new NPM package for each component.
-NOTE #2: I have only added unit test coverage for helpers and atoms.
+NOTES: I have set up the `Button` component as a standalone package, to show how the monorepo might look. On a successful PR, we could use the CI/CD pipleines to build and publish a new NPM package for each component. I have only added unit test coverage for helpers and atoms.
 
 ## Features
 
