@@ -35,7 +35,7 @@ The typical structure of a component is:
 - `Component.styles.types.ts` - typescript types and interfaces for the style
 - `Component.stories.ts` - storybook doc examples
 
-NOTES: I have set up the `Button` component as a standalone package, to show how the monorepo might look. On a successful PR, we could use the CI/CD pipleines to build and publish a new NPM package for each component. I have only added unit test coverage for helpers and atoms.
+NOTES: I have set up the `Button` component as a standalone package, to show how the monorepo might look. On a successful PR, we could use the CI/CD pipleines to build and publish a new NPM package for each component. I have only added unit test coverage for helpers and atoms, due to time constraints.  But I have added 100% unit test coverage under suggested enhancements.  Basic behaviour of the AdvancedButton is also covered by the BDD tests.
 
 ## Features
 
@@ -43,11 +43,11 @@ NOTES: I have set up the `Button` component as a standalone package, to show how
 - Yarn workspaces for monorepo (example - Button)
 - Uses Vite over Webpack for speed and simplicity
 - Uses eslint for code quality
-- Uses Jest and RTL for unit testing, inclusing accessibility tests
+- Uses Jest and RTL for unit testing, including accessibility tests
 - Uses Cypress for behaviour driven tests
-- Code coverage reporting with coveralls
-- Uses Github Actions for CI/CD (example - pre-merge only)
-- Added simple express fake API for more control of back and and for offline bdds
+- Code coverage reporting with coveralls badge
+- Uses Github Actions for CI/CD (example - pre-merge only - create PR from development to master)
+- Added simple express fake API for more control of back end and for offline bdds
 
 ## Suggested Enhancements
 
