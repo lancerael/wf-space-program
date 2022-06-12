@@ -1,6 +1,6 @@
-export type Status = 'default' | 'pending' | 'error'
+import { Status } from '@/types/global.types'
 
 export interface TooltipProps {
   text: string
-  status: Status
+  status?: Status
 }

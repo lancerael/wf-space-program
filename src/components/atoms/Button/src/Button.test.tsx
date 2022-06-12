@@ -3,7 +3,7 @@ import React from 'react'
 import Button from './Button'
 import { render, screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
-import { Status } from '../../Tooltip/Tooltip.types'
+import { Status } from '../../../../types/global.types'
 
 expect.extend(toHaveNoViolations)
 
@@ -11,7 +11,7 @@ const defaultProps = {
 	onClick: jest.fn(),
 	onMouseOver: jest.fn(),
 	onMouseOut: jest.fn(),
-	status: 'default' as Status,
+	status: 'default' as Status | undefined,
 	disabled: false,
 	children: 'Hello'
 }

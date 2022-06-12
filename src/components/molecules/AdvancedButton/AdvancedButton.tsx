@@ -4,9 +4,9 @@ import { generateKey } from '@/helpers/generateKey'
 import { AdvancedButtonProps } from './AdvancedButton.types'
 import { STATUS_MAP } from '@/constants'
 import Loader from '@/components/atoms/Loader'
-import { Status } from '@/components/atoms/Tooltip/Tooltip.types'
 import Tooltip from '@/components/atoms/Tooltip'
 import Button from '@/components/atoms/Button/src'
+import { Status } from '@/types/global.types'
 
 const AdvancedButton = ({
 	defaultStatus = 'default',
@@ -16,17 +16,24 @@ const AdvancedButton = ({
 	labels,
 	tooltips,
 }: AdvancedButtonProps): JSX.Element => {
-	const [status, setStatus] = useState<Status>(defaultStatus)
+	const [status, setStatus] = useState<Status>(disabled ? 'default' : defaultStatus)
 	const [hover, setHover] = useState(false)
 	const [isTooltipVisible, setIsTooltipVisible] = useState(false)
 	const requestKey = useMemo(generateKey, [])
 
 	useEffect(() => {
+		if (disabled) return
 		if (status==='error' || hover) setIsTooltipVisible(true)
 		else setIsTooltipVisible(false)
 	}, [status, hover])
 
+	useEffect(() => {
+		setStatus(disabled ? 'default' : defaultStatus)
+		setIsTooltipVisible(disabled ? false : isTooltipVisible)
+	}, [defaultStatus, disabled])
+
 	const onClick = async () => {
+		if (disabled) return
 		if (status==='pending') {
 			abortRequestStatus(requestKey)
 			setStatus('error')

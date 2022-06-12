@@ -1,11 +1,11 @@
-import { STATUS_COLOURS } from '../../../../../constants'
+import { STATUS_COLOURS } from '../../../../constants'
 import styled, { css } from 'styled-components'
+import { standardFont } from '../../../../styles/index'
 
 import { StyledButtonProps } from './Button.style.types'
 
 export const StyledButton = styled.button(({ status }: StyledButtonProps) => css`
-  font-size: 1em;
-  text-align: center;
+  ${standardFont}
   border: 2px solid ${STATUS_COLOURS[status]};
   color:  ${STATUS_COLOURS[status]};
   background-color: white;

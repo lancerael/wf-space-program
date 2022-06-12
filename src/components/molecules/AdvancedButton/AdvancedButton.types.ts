@@ -1,4 +1,4 @@
-import { Status } from '@/components/atoms/Tooltip/Tooltip.types'
+import { Status } from '@/types/global.types'
 
 export interface CopyMap {
   default: string,
