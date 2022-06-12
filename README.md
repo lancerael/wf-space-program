@@ -47,7 +47,7 @@ NOTES: I have set up the `Button` component as a standalone package, to show how
 - Uses Cypress for behaviour driven tests
 - Code coverage reporting with coveralls badge
 - Uses Github Actions for CI/CD (example - pre-merge only - create PR from development to master)
-- Added simple express fake API for more control of back and and for offline bdds
+- Added simple express fake API for more control of back end and for offline bdds
 
 ## Suggested Enhancements
 
