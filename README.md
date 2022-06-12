@@ -8,7 +8,7 @@ Component library for WF space program
 
 ## Overview
 
-In building an AdvancedButton component, I have shown the early stages of how I might set up a component library.  The project is currently set up as a single application, but I have taken some steps to show how it would be converted to a monorepo, with each component able to be published to npm and imported in isolation.
+I have shown the early stages of how I might set up a component library.  The project is currently set up as a single application, but I have taken some steps to show how it would be converted to a monorepo, with each component published to npm to be imported in isolation.
 
 ## Getting started
 
