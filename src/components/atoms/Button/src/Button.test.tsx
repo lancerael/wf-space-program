@@ -11,7 +11,7 @@ const defaultProps = {
 	onClick: jest.fn(),
 	onMouseOver: jest.fn(),
 	onMouseOut: jest.fn(),
-	status: 'default' as Status,
+	status: 'default' as Status | undefined,
 	disabled: false,
 	children: 'Hello'
 }

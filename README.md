@@ -40,7 +40,7 @@ NOTE #2: I have only added unit test coverage for helpers and atoms.
 
 ## Features
 
-- Fully written in TypeScript
+- Fully written in TypeScript (minimal enforcement for rapid prototyping)
 - Yarn workspaces for monorepo (example - Button)
 - Uses Vite over Webpack for speed and simplicity
 - Uses eslint for code quality
@@ -57,5 +57,6 @@ NOTE #2: I have only added unit test coverage for helpers and atoms.
 - Complete unit test coverage to 100%
 - Add BDDs to test all acceptence criteria
 - Replace Jest with Vitest 
+- Stricter rules around usage of TypeScript
 - Create a real API and use pipelines to deploy to AWS Lambda / API-GW
 - Automate versioning & changelogs in pipelines
