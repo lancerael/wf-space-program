@@ -1,11 +1,11 @@
 import { STATUS_COLOURS } from '@/constants'
+import { standardFont } from '@/styles'
 import styled, { css } from 'styled-components'
 
 import { StyledTooltipProps } from './Tooltip.style.types'
 
 export const StyledTooltip = styled.div(({ status }: StyledTooltipProps) => css`
-  font-size: 1em;
-  text-align: center;
+  ${standardFont}
   background-color: ${STATUS_COLOURS[status]};
   color: white;
   width: 170px;

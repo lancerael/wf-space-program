@@ -1,9 +1,9 @@
-import React from 'react'
+import * as React from 'react'
 import { ButtonProps } from './Button.types'
 import { StyledButton } from './Button.style'
 
-const Button = ({ children, ...buttonProps }: ButtonProps) => (
-	<StyledButton {...buttonProps}>
+export const Button = ({ children, status = 'default', ...buttonProps }: ButtonProps) => (
+	<StyledButton {...{status, ...buttonProps}} data-selector='button'>
 		{ children }
 	</StyledButton>
 )

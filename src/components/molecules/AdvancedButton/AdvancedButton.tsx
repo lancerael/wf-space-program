@@ -4,9 +4,9 @@ import { generateKey } from '@/helpers/generateKey'
 import { AdvancedButtonProps } from './AdvancedButton.types'
 import { STATUS_MAP } from '@/constants'
 import Loader from '@/components/atoms/Loader'
-import { Status } from '@/components/atoms/Tooltip/Tooltip.types'
 import Tooltip from '@/components/atoms/Tooltip'
 import Button from '@/components/atoms/Button/src'
+import { Status } from '@/types/global.types'
 
 const AdvancedButton = ({
 	defaultStatus = 'default',

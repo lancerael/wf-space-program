@@ -19,12 +19,11 @@ Check out the repo and run the following commands:
 * `yarn lint` - to verify the style of the code
 * `yarn tdd` (or `yarn test`)- to run the unit tests
 * `yarn bdd` - to run the integration tests
+* `yarn storybook` - to launch storybook
 
-There are also build and preview tasks, though they would be deprecated as the conversion to a monorepo is completed.  
+## Code Structure
 
-## Atomic Structure
-
-Code is split heirarchically into atoms and molecules, meaning the smaller pieces of the AdvancedButton (button, loader and tooltip) can be reused inside other more advanced components.  There are also seperate folders for helper functions and constants.
+Code is split heirarchically using atomic design principles. We have atoms and molecules, meaning the smaller pieces of the AdvancedButton (button, loader and tooltip) can be reused inside other more advanced components.  There are also seperate folders for helper functions and constants.
 
 The typical structure of a component is:
 
@@ -34,6 +33,10 @@ The typical structure of a component is:
 - `Component.test.ts` - the unit tests for the component
 - `Component.style.tsx` - styled component code
 - `Component.styles.types.ts` - typescript types and interfaces for the style
+- `Component.stories.ts` - storybook doc examples
+
+NOTE #1: I have set up the `Button` component as a standalone package, to show how the monorepo might look. On a successful PR, we could use the CI/CD pipleines to build and publish a new NPM package for each component.
+NOTE #2: I have only added unit test coverage for helpers and atoms.
 
 ## Features
 
@@ -41,12 +44,17 @@ The typical structure of a component is:
 - Yarn workspaces for monorepo (example - Button)
 - Uses Vite over Webpack for speed and simplicity
 - Uses eslint for code quality
-- Uses Jest and RTL for unit testing
-- Uses Cypress for behaviour driven tests (may not be needed in monorepo, but I wanted to show how it works)
+- Uses Jest and RTL for unit testing, inclusing accessibility tests
+- Uses Cypress for behaviour driven tests
 - Code coverage reporting with coveralls
 - Uses Github Actions for CI/CD (example - pre-merge only)
 
-## Future Work
+## Suggested Enhancements
 
-- Complete conversion to monorepo and publish individual components on npm
+- Complete conversion to monorepo
+- Use CI/CD pipelines to publish individual components on npm 
 - Complete unit test coverage to 100%
+- Add BDDs to test all acceptence criteria
+- Replace Jest with Vitest 
+- Create a real API and use pipelines to deploy to AWS Lambda / API-GW
+- Automate versioning & changelogs in pipelines
