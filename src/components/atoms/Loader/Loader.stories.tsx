@@ -3,8 +3,8 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Loader } from './Loader'
 
 export default {
-	title: 'Loader',
-	component: Loader,
+  title: 'Loader',
+  component: Loader,
 } as ComponentMeta<typeof Loader>
 
 const Template: ComponentStory<typeof Loader> = () => <Loader />
