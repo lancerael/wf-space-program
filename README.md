@@ -17,7 +17,7 @@ Check out the repo and run the following commands:
 * `yarn install` - install the project and dependencies
 * `yarn dev` - launch the server and fake API so you can access the demo in the browser
 * `yarn lint` - to verify the style of the code
-* `yarn tdd` (or `yarn test`)- to run the unit tests
+* `yarn tdd` - (or `yarn test`) to run the unit tests
 * `yarn bdd` - to run the integration tests
 * `yarn storybook` - to launch storybook
 
