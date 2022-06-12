@@ -8,14 +8,14 @@ expect.extend(toHaveNoViolations)
 
 describe('Loader', () => {
 
-	it('should render a loader', () => {
-		render(<Loader/>)
-		expect(screen.getAllByTitle('Loading...')).toHaveLength(1)
-	})
+  it('should render a loader', () => {
+    render(<Loader/>)
+    expect(screen.getAllByTitle('Loading...')).toHaveLength(1)
+  })
 
-	it('should not fail any accessibility tests', async () => { 
-		const { container } = render(<Loader/>)
-		expect(await axe(container)).toHaveNoViolations()
-	})
+  it('should not fail any accessibility tests', async () => { 
+    const { container } = render(<Loader/>)
+    expect(await axe(container)).toHaveNoViolations()
+  })
 
 })
