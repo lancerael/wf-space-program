@@ -48,6 +48,7 @@ NOTE #2: I have only added unit test coverage for helpers and atoms.
 - Uses Cypress for behaviour driven tests
 - Code coverage reporting with coveralls
 - Uses Github Actions for CI/CD (example - pre-merge only)
+- Added simple express fake API for more control of back and and for offline bdds
 
 ## Suggested Enhancements
 
