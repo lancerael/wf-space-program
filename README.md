@@ -43,7 +43,7 @@ NOTES: I have set up the `Button` component as a standalone package, to show how
 - Yarn workspaces for monorepo (example - Button)
 - Uses Vite over Webpack for speed and simplicity
 - Uses eslint for code quality
-- Uses Jest and RTL for unit testing, inclusing accessibility tests
+- Uses Jest and RTL for unit testing, including accessibility tests
 - Uses Cypress for behaviour driven tests
 - Code coverage reporting with coveralls
 - Uses Github Actions for CI/CD (example - pre-merge only)
