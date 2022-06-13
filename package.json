@@ -52,6 +52,7 @@
     "jest": "^28.1.1",
     "jest-axe": "^6.0.0",
     "jest-environment-jsdom": "^28.1.1",
+    "jest-fetch-mock": "^3.0.3",
     "path": "^0.12.7",
     "ts-jest": "^28.0.4",
     "ts-node": "^10.8.1",

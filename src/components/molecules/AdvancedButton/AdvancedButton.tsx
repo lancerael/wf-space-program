@@ -18,7 +18,7 @@ const AdvancedButton = ({
 }: AdvancedButtonProps): JSX.Element => {
   const [status, setStatus] = useState<Status>(disabled ? 'default' : defaultStatus)
   const [hover, setHover] = useState(false)
-  const [isTooltipVisible, setIsTooltipVisible] = useState(false)
+  const [isTooltipVisible, setIsTooltipVisible] = useState(status === 'error' && disabled === false)
   const requestKey = useMemo(generateKey, [])
 
   useEffect(() => {
