@@ -4,6 +4,13 @@ import { act, fireEvent, render, screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import AdvancedButton from './AdvancedButton'
 
+jest.mock('@/helpers/apiRequestStatus', () => {
+  return {
+    apiRequestStatus: jest.fn(() => Promise.resolve({status: 200} as Response)),
+    abortRequestStatus: jest.fn()
+  }
+})
+
 expect.extend(toHaveNoViolations)
 
 const defaultProps = {
@@ -32,16 +39,16 @@ describe('AdvancedButton', () => {
     expect(await axe(container)).toHaveNoViolations()
   })
 
-  it.skip('should fire the rocket', () => {
+  it('should fire the rocket', () => {
     render(<AdvancedButton {...defaultProps}/>)
-    const button = screen.getByRole('button')
     act(() => {
+      const button = screen.getByRole('button')
       fireEvent.click(button)
     })
     expect(screen.getAllByText('Launching')).toHaveLength(1)
   })
 
-  it.skip('should cancel the rocket', () => {
+  it('should cancel the rocket', () => {
     render(<AdvancedButton {...defaultProps}/>)
     const button = screen.getByRole('button')
     act(() => {
@@ -52,5 +59,6 @@ describe('AdvancedButton', () => {
     })
     expect(screen.getAllByText('Ignition error')).toHaveLength(1)
   })
+
 
 })
