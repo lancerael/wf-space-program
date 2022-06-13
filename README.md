@@ -59,4 +59,4 @@ NOTES: I have set up the `Button` component as a standalone package, to show how
 - Stricter rules around usage of TypeScript
 - Create a real API and use pipelines to deploy to AWS Lambda / API-GW
 - Automate versioning & changelogs in pipelines
-- Debug false warning in RTL caused by fixing fetch mock in pipeline
+- Fix warning in RTL caused by fixing fetch mock in pipeline
