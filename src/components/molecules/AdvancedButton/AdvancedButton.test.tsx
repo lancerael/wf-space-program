@@ -1,9 +1,16 @@
 
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { act, fireEvent, render, screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import AdvancedButton from './AdvancedButton'
 
+import * as apiHelpers from '../../../helpers/apiRequestStatus'
+jest.mock('../../../helpers/apiRequestStatus')
+
+;(apiHelpers.apiRequestStatus as jest.Mock).mockReturnValue(Promise.resolve({status: 200} as Response))
+
+    // apiRequestStatus: jest.fn(() => Promise.resolve({status: 200} as Response)),
+    // abortRequestStatus: jest.fn()
 
 expect.extend(toHaveNoViolations)
 
@@ -32,5 +39,27 @@ describe('AdvancedButton', () => {
     const { container } = render(<AdvancedButton {...defaultProps}/>)
     expect(await axe(container)).toHaveNoViolations()
   })
+
+  it('should fire the rocket', () => {
+    render(<AdvancedButton {...defaultProps}/>)
+    act(() => {
+      const button = screen.getByRole('button')
+      fireEvent.click(button)
+    })
+    expect(screen.getAllByText('Launching')).toHaveLength(1)
+  })
+
+  it('should cancel the rocket', () => {
+    render(<AdvancedButton {...defaultProps}/>)
+    const button = screen.getByRole('button')
+    act(() => {
+      fireEvent.click(button)
+    })
+    act(() => {
+      fireEvent.click(button)
+    })
+    expect(screen.getAllByText('Ignition error')).toHaveLength(1)
+  })
+
 
 })
