@@ -1,6 +1,6 @@
 
 import { enableFetchMocks } from 'jest-fetch-mock'
-enableFetchMocks()
+enableFetchMocks()  // causes a false warning in RTL but fixes issues in pipeline
 import React from 'react'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
