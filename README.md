@@ -35,7 +35,7 @@ The typical structure of a component is:
 - `Component.styles.types.ts` - typescript types and interfaces for the style
 - `Component.stories.ts` - storybook doc examples
 
-NOTES: I have set up the `Button` component as a standalone package, to show how the monorepo might look. On a successful PR, we could use the CI/CD pipleines to build and publish a new NPM package for each component. I have only added unit test coverage for helpers and atoms, due to time constraints.  But I have added 100% unit test coverage under suggested enhancements.  Basic behaviour of the AdvancedButton is also covered by the BDD tests.
+NOTES: I have set up the `Button` component as a standalone package, to show how the monorepo might look. On a successful PR, we could use the CI/CD pipleines to build and publish a new NPM package for each component. I have not added 100% unit test coverage, due to time constraints.  But I have added this under suggested enhancements.  Basic behaviour of the AdvancedButton is also covered by the BDD tests.
 
 ## Features
 
