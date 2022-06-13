@@ -20,9 +20,7 @@ const defaultProps = {
   endpoint: './fake-api/1000',
 }
 
-global.fetch = jest.fn().mockImplementationOnce(async () => {
-  return new Promise(resolve => setTimeout(() => resolve({status:200}), 5000))
-})
+global.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({status: 200} as Response))
 
 describe('AdvancedButton', () => {
 
