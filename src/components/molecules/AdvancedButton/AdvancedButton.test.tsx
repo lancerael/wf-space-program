@@ -32,7 +32,7 @@ describe('AdvancedButton', () => {
     expect(await axe(container)).toHaveNoViolations()
   })
 
-  it('should fire the rocket', () => {
+  it.skip('should fire the rocket', () => {
     render(<AdvancedButton {...defaultProps}/>)
     const button = screen.getByRole('button')
     act(() => {
