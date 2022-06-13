@@ -60,3 +60,5 @@ NOTES: I have set up the `Button` component as a standalone package, to show how
 - Create a real API and use pipelines to deploy to AWS Lambda / API-GW
 - Automate versioning & changelogs in pipelines
 - Fix warning in RTL caused by fixing fetch mock in pipeline
+- Use universal fetch mock in all tests
+- Improve button/tooltip layout CSS for better responsiveness
