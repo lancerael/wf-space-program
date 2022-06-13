@@ -21,7 +21,7 @@ const defaultProps = {
 }
 
 global.fetch = jest.fn().mockImplementationOnce(async () => {
-  return new Promise(resolve => setTimeout(() => resolve(200), 5000))
+  return new Promise(resolve => setTimeout(() => resolve({status:200}), 5000))
 })
 
 describe('AdvancedButton', () => {
