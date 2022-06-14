@@ -1,5 +1,4 @@
 import fetchMock, { enableFetchMocks } from 'jest-fetch-mock'
-import React from 'react';
 enableFetchMocks()
 import { apiRequestStatus, controllers, abortRequestStatus } from './apiRequestStatus'
 
