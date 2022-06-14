@@ -19,7 +19,7 @@ Check out the repo and run the following commands:
 * `yarn lint` - to verify the style of the code
 * `yarn tdd` - (or `yarn test`) to run the unit tests
 * `yarn bdd` - to run the integration tests
-* `yarn storybook` - to launch storybook
+* `yarn sb` - to launch storybook
 
 ## Code Structure
 

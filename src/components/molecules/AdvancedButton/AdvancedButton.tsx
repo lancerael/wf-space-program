@@ -50,8 +50,8 @@ const AdvancedButton = ({
   
   return (
     <Button {...{onClick, onMouseOver, onMouseOut, status, disabled}}>
-      {labels[status]}
-      {status==='pending' && <Loader/>}
+      { labels[status] }
+      { status==='pending' && <Loader/> }
       { isTooltipVisible && <Tooltip status={status} text={tooltips[status]}/> }
     </Button>
   )
