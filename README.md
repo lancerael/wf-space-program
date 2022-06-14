@@ -51,12 +51,13 @@ NOTES: I have set up the `Button` component as a standalone package, to show how
 
 ## Suggested Enhancements
 
-- Complete conversion to monorepo
-- Use CI/CD pipelines to publish individual components on npm 
-- Complete unit test coverage to 100%
-- Add BDDs to test all acceptence criteria
+- Conversion to monorepo
+- Unit test coverage to 100%
+- BDDs to test all acceptence criteria (may not be used in component library if sufficient overlap with TDD suite)
 - Replace Jest with Vitest 
 - Stricter rules around usage of TypeScript
+- Thorough commentary to generate TS Docs eg TypeDoc
+- CI/CD pipelines to publish individual components on npm 
 - Create a real API and use pipelines to deploy to AWS Lambda / API-GW
 - Automate versioning & changelogs in pipelines
 - Enforce code coverage in pre-merge pipline
