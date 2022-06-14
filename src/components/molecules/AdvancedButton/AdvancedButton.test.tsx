@@ -1,12 +1,14 @@
-
-import { enableFetchMocks } from 'jest-fetch-mock'
-enableFetchMocks()  // causes a warning in RTL but fixes issues in pipeline
 import React from 'react'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import AdvancedButton from './AdvancedButton'
 
 expect.extend(toHaveNoViolations)
+
+jest.mock('@/helpers/apiRequestStatus', () => ({
+  apiRequestStatus: jest.fn(() => Promise.resolve(0)),
+  abortRequestStatus: jest.fn()
+}))
 
 const defaultProps = {
   labels: {

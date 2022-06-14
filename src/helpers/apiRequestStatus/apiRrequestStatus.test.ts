@@ -1,10 +1,8 @@
+import fetchMock, { enableFetchMocks } from 'jest-fetch-mock'
+enableFetchMocks()
 import { apiRequestStatus, controllers, abortRequestStatus } from './apiRequestStatus'
 
-jest.useFakeTimers()
-
-const mockFetchStatus = (status: number) => {
-  global.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({status} as Response))
-}
+const mockFetchStatus = (status: number) => fetchMock.mockResponseOnce(() => new Promise(resolve => setTimeout(() => resolve({status}))))
 
 describe('API status requests', () => {
 
@@ -46,8 +44,7 @@ describe('Timeout', () => {
   it('times out a request', async () => {
     mockFetchStatus(200)
     const status = await apiRequestStatus('test', 'test', 1)
-    jest.runAllTimers()
-    expect(status).toBeDefined() // TBC
+    expect(status).toBe(500)
   })
 
 })
