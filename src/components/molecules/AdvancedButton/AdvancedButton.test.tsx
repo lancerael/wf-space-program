@@ -2,11 +2,13 @@ import React from 'react'
 import { act, fireEvent, render, screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import AdvancedButton from './AdvancedButton'
-import * as apiHelpers from '@/helpers/apiRequestStatus';
 
 expect.extend(toHaveNoViolations)
 
-jest.mock('@/helpers/apiRequestStatus')
+jest.mock('@/helpers/apiRequestStatus', () => ({
+  apiRequestStatus: jest.fn(() => Promise.resolve(0)),
+  abortRequestStatus: jest.fn()
+}))
 
 const defaultProps = {
   labels: {

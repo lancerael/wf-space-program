@@ -41,7 +41,7 @@ const AdvancedButton = ({
     }
     setStatus('pending')
     const apiStatus = await apiRequestStatus(endpoint, requestKey, timeout)
-    setStatus(STATUS_MAP[apiStatus] as Status)
+    if (apiStatus) setStatus(STATUS_MAP[apiStatus] as Status)
   }
 
   const onMouseOver = () => setHover(true)
