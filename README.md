@@ -59,4 +59,5 @@ NOTES: I have set up the `Button` component as a standalone package, to show how
 - Stricter rules around usage of TypeScript
 - Create a real API and use pipelines to deploy to AWS Lambda / API-GW
 - Automate versioning & changelogs in pipelines
+- Enforce code coverage in pre-merge pipline
 - Improve button/tooltip layout CSS for better responsiveness
