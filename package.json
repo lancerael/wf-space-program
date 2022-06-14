@@ -9,7 +9,7 @@
     "test": "jest",
     "tdd": "jest",
     "bdd": "concurrently \"yarn dev\" \"yarn cypress open\"",
-    "storybook": "start-storybook -p 6006"
+    "sb": "start-storybook -p 6006"
   },
   "workspaces": [
     "src/components/atoms/Button"
