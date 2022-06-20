@@ -23,8 +23,7 @@ const AdvancedButton = ({
 
   useEffect(() => {
     if (disabled) return
-    if (status==='error' || hover) setIsTooltipVisible(true)
-    else setIsTooltipVisible(false)
+    setIsTooltipVisible(status==='error' || hover)
   }, [status, hover])
 
   useEffect(() => {
