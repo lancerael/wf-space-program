@@ -16,10 +16,11 @@ const AdvancedButton = ({
   labels,
   tooltips,
 }: AdvancedButtonProps): JSX.Element => {
-  const [status, setStatus] = useState<Status>(disabled ? 'default' : defaultStatus)
+  const buttonStatus = disabled ? 'default' : defaultStatus
+  const requestKey = useMemo(generateKey, [])
+  const [status, setStatus] = useState<Status>(buttonStatus)
   const [hover, setHover] = useState(false)
   const [isTooltipVisible, setIsTooltipVisible] = useState(status === 'error' && disabled === false)
-  const requestKey = useMemo(generateKey, [])
 
   useEffect(() => {
     if (disabled) return
@@ -27,7 +28,7 @@ const AdvancedButton = ({
   }, [status, hover])
 
   useEffect(() => {
-    setStatus(disabled ? 'default' : defaultStatus)
+    setStatus(buttonStatus)
     setIsTooltipVisible(disabled ? false : isTooltipVisible)
   }, [defaultStatus, disabled])
 
